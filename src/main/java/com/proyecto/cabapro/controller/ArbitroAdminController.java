@@ -99,7 +99,6 @@ public class ArbitroAdminController {
         return "admin/arbitros/form";
     }
 
-    // ================= EDITAR =================
     @GetMapping("/{id}/editar")
     public String editForm(@PathVariable Integer id, Model model) {
         Arbitro a = service.buscar(id);
@@ -147,7 +146,7 @@ public class ArbitroAdminController {
         return "admin/arbitros/form";
     }
 
-    // ================= ELIMINAR =================
+    
     @PostMapping("/{id}/eliminar")
     public String delete(@PathVariable Integer id) {
         service.eliminar(id);
