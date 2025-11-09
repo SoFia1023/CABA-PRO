@@ -33,7 +33,7 @@ public class ArbitroAdminController {
         this.messageSource = messageSource;
     }
 
-    // ================= LISTADO (panel central) =================
+    
     @GetMapping
     public String list(@RequestParam(value = "arbitroId", required = false) Integer arbitroId,
                        Model model, Locale locale) {
@@ -55,7 +55,7 @@ public class ArbitroAdminController {
         return "admin/arbitros/list";
     }
 
-    // ================= CREAR =================
+  
     @GetMapping("/nuevo")
     public String newForm(Model model) {
         model.addAttribute("form", new ArbitroForm());
@@ -154,7 +154,7 @@ public class ArbitroAdminController {
         return "redirect:/admin/arbitros";
     }
 
-    // ================= Helpers =================
+  
     private void commonSelects(Model model) {
         model.addAttribute("especialidades", Especialidad.values());
         model.addAttribute("escalafones", Escalafon.values());
