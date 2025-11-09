@@ -7,7 +7,7 @@ public class NewsArticleTest {
 
     @Test
     public void testGetters() {
-        // Crear objeto de prueba
+      
         NewsArticle article = new NewsArticle(
             "Título de prueba",
             "Descripción de prueba",
@@ -16,7 +16,7 @@ public class NewsArticleTest {
             "Fuente de prueba"
         );
 
-        // Verificar que los getters devuelven lo correcto
+        // Verificación de los gett and sett del modelo
         assertEquals("Título de prueba", article.getTitle());
         assertEquals("Descripción de prueba", article.getDescription());
         assertEquals("http://linkdeprueba.com", article.getLink());
