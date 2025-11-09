@@ -49,24 +49,3 @@ public class SecurityConfig {
         return http.build();
     }
 }
-
-
-/*[Petición HTTP]
-       |
-       v
-[SecurityFilterChain]
-       |
-       +--> CSRF? disabled -> sigue
-       |
-       +--> URL autorizada? 
-       |      |-- /, /login, /registro, /css/** -> pasa
-       |      |-- /admin/** -> check ROLE_ADMIN
-       |      |-- /arbitro/** -> check ROLE_ARBITRO
-       |      |-- cualquier otra -> check autenticado
-       |
-       +--> Login Form?
-       |      |-- credenciales correctas -> successHandler -> redirige según rol
-       |
-       +--> Logout?
-              |-- invalida sesión -> redirige a /
-*/
