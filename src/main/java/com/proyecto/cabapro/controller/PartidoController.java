@@ -36,7 +36,7 @@ public class PartidoController {
     }
 
 
-    // Form editar
+   
     @GetMapping("/editar/{id}")
     public String mostrarFormEditar(@PathVariable("id") int id, Model model) {
         Partido partido = partidoService.getPartidoById(id).orElse(null);
@@ -48,8 +48,8 @@ public class PartidoController {
         partidoForm.setIdPartido(partido.getIdPartido());
         partidoForm.setFecha(partido.getFecha());
         partidoForm.setLugar(partido.getLugar());
-        //cambiar por partidoForm.setEstadoPartido(partido.getEstadoPartido());
-        // Recalcular estado automáticamente
+       
+      
         partido.setEstadoPartido(partidoService.calcularEstado(partido));
 
         partidoForm.setEquipoLocal(partido.getEquipoLocal());
@@ -62,7 +62,7 @@ public class PartidoController {
         return "partidos/form";
     }
 
-    // Actualizar
+
     @PostMapping("/actualizar/{id}")
     public String actualizar(@PathVariable("id") int id,
                              @Valid @ModelAttribute("partidoForm") PartidoForm partidoForm,
@@ -106,7 +106,7 @@ public class PartidoController {
 
     // Helpers
     private void cargarListas(Model model) {
-        // Torneos activos = fechaFin > ahora
+       
         List<Torneo> torneosActivos = torneoService.listarTorneos()
                 .stream()
                 .filter(t -> t.getFechaFin() != null && t.getFechaFin().isAfter(LocalDateTime.now()))
