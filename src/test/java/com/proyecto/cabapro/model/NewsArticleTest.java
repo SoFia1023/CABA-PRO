@@ -7,7 +7,7 @@ public class NewsArticleTest {
 
     @Test
     public void testGetters() {
-      
+        // ponemos datos de prueba
         NewsArticle article = new NewsArticle(
             "Título de prueba",
             "Descripción de prueba",
