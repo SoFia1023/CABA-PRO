@@ -102,9 +102,6 @@ public class PartidoController {
             return "redirect:/partidos";
         }
 
-
-
-    // Helpers
     private void cargarListas(Model model) {
        
         List<Torneo> torneosActivos = torneoService.listarTorneos()
