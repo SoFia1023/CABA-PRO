@@ -32,7 +32,7 @@ public class AsignacionAdminController {
         model.addAttribute("faltanEsp", asignacionService.especialidadesFaltantes(partidoId));
         model.addAttribute("espOcupadas", asignacionService.especialidadesOcupadas(partidoId));
 
-        return "admin/asignacion/crearlo"; 
+        return "admin/Asignacion/crearlo"; 
     }
 
     
