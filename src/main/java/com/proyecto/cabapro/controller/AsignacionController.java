@@ -40,6 +40,7 @@ public class AsignacionController {
         return "redirect:/arbitro/asignaciones";
     }
 
+    // Rechazar una asignación
     @PostMapping("/{id}/rechazar")
     public String rechazar(@AuthenticationPrincipal User principal,
                            @PathVariable Long id,
